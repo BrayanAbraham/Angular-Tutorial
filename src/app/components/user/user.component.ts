@@ -22,7 +22,7 @@ export class UserComponent implements OnInit {
   //Methods
   constructor() {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.user = {
       firstName: 'John',
       lastName: 'Doe',
