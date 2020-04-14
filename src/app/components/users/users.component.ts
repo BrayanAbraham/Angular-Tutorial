@@ -11,6 +11,7 @@ export class UsersComponent implements OnInit {
   showExtended: boolean = true;
   loaded: boolean = false;
   enableAdd: boolean = true;
+  showUserForm: boolean = false;
 
   constructor() {}
 
@@ -64,7 +65,8 @@ export class UsersComponent implements OnInit {
     this.users.push(user);
   }
 
-  // toggleHide(user: User) {
-  //   user.hide = !user.hide;
-  // }
+  onSubmit(e) {
+    e.preventDefault();
+    console.log(123);
+  }
 }
