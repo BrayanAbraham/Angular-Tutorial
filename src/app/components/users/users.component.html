@@ -24,49 +24,18 @@
       />
     </div>
     <div class="form-group">
-      <label>Age</label>
-      <input
-        type="number"
-        name="age"
-        id="age"
-        class="form-control"
-        [(ngModel)]="user.age"
-      />
-    </div>
-    <div class="form-group">
-      <label>Street Address</label>
+      <label>Email</label>
       <input
         type="text"
-        name="street"
-        id="street"
+        name="email"
+        id="email"
         class="form-control"
-        [(ngModel)]="user.address.street"
-      />
-    </div>
-    <div class="form-group">
-      <label>City</label>
-      <input
-        type="text"
-        name="city"
-        id="city"
-        class="form-control"
-        [(ngModel)]="user.address.city"
-      />
-    </div>
-    <div class="form-group">
-      <label>State</label>
-      <input
-        type="text"
-        name="state"
-        id="state"
-        class="form-control"
-        [(ngModel)]="user.address.state"
+        [(ngModel)]="user.email"
       />
     </div>
     <button
       [disabled]="user.firstName == '' || user.lastName == ''"
       class="btn btn-block mb-3"
-      (click)="addUser()"
     >
       Add New User
     </button>
@@ -80,7 +49,7 @@
   >
     <h3>
       {{ user.firstName }} {{ user.lastName }}
-      <small *ngIf="user.age && user.address"
+      <small
         ><button (click)="user.hide = !user.hide" class="btn btn-dark btn-sm">
           <i
             class="fa"
@@ -88,12 +57,8 @@
           ></i></button
       ></small>
     </h3>
-    <ul class="list-group" *ngIf="!user.hide && user.age && user.address">
-      <li class="list-group-item">Age: {{ user.age }}</li>
-      <li class="list-group-item">
-        Address: {{ user.address.street }}, {{ user.address.city }},
-        {{ user.address.state }}
-      </li>
+    <ul class="list-group" *ngIf="!user.hide">
+      <li class="list-group-item">Email: {{ user.email }}</li>
       <li class="list-group-item">Joined: {{ user.registered | date }}</li>
     </ul>
   </li>
