@@ -13,7 +13,7 @@ export class UsersComponent implements OnInit {
     lastName: '',
     email: '',
   };
-  users: User[];
+  users: User[] = [];
   showExtended: boolean = true;
   loaded: boolean = false;
   enableAdd: boolean = false;
@@ -34,7 +34,7 @@ export class UsersComponent implements OnInit {
     });
   }
 
-  onSubmit({ value, valid }: { value: User; valid: boolean }) {
+  onSubmit({ value, valid }: { value: User; valid: boolean | null }) {
     if (!valid) {
       console.log('Form is not Valid');
     } else {

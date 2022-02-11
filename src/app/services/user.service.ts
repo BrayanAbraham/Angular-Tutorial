@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import { User } from '../models/User';
 import { Observable, of } from 'rxjs';
+import { User } from '../models/User';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
-  users: User[];
-  data: Observable<any>;
+  users: User[] = [];
+  data: Observable<any> = new Observable();
 
   constructor() {
     this.users = [

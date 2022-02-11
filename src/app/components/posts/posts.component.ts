@@ -8,7 +8,7 @@ import { PostsService } from 'src/app/services/posts.service';
   styleUrls: ['./posts.component.css'],
 })
 export class PostsComponent implements OnInit {
-  posts: Post[];
+  posts: Post[] = [];
   currentPost: Post = {
     id: 0,
     title: '',

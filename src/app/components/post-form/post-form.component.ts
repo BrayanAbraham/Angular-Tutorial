@@ -1,6 +1,6 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { PostsService } from 'src/app/services/posts.service';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Post } from 'src/app/models/Post';
+import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
   selector: 'app-post-form',
@@ -13,11 +13,14 @@ export class PostFormComponent implements OnInit {
   @Input() currentPost: Post;
   @Input() isEdit: boolean;
 
-  constructor(private postService: PostsService) {}
+  constructor(private postService: PostsService) {
+    this.currentPost = { id: 0, title: '', body: '' };
+    this.isEdit = false;
+  }
 
   ngOnInit(): void {}
 
-  addPost(title, body) {
+  addPost(title: string, body: string) {
     if (!title || !body) {
       alert('Please add post');
     } else {
