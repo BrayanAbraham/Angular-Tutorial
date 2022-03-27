@@ -4,9 +4,10 @@ import { Post } from 'src/app/models/Post';
 import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
-  selector: 'app-post',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css'],
+    selector: 'app-post',
+    templateUrl: './post.component.html',
+    styleUrls: ['./post.component.css'],
+    standalone: false
 })
 export class PostComponent implements OnInit {
   post: Post | void;

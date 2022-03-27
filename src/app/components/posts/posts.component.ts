@@ -3,9 +3,10 @@ import { Post } from 'src/app/models/Post';
 import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
-  selector: 'app-posts',
-  templateUrl: './posts.component.html',
-  styleUrls: ['./posts.component.css'],
+    selector: 'app-posts',
+    templateUrl: './posts.component.html',
+    styleUrls: ['./posts.component.css'],
+    standalone: false
 })
 export class PostsComponent implements OnInit {
   posts: Post[] = [];

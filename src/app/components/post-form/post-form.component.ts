@@ -3,9 +3,10 @@ import { Post } from 'src/app/models/Post';
 import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
-  selector: 'app-post-form',
-  templateUrl: './post-form.component.html',
-  styleUrls: ['./post-form.component.css'],
+    selector: 'app-post-form',
+    templateUrl: './post-form.component.html',
+    styleUrls: ['./post-form.component.css'],
+    standalone: false
 })
 export class PostFormComponent implements OnInit {
   @Output() newPost: EventEmitter<Post> = new EventEmitter();
