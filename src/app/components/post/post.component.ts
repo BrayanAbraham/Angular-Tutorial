@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Post } from 'src/app/models/Post';
 import { PostsService } from 'src/app/services/posts.service';
@@ -7,6 +7,7 @@ import { PostsService } from 'src/app/services/posts.service';
     selector: 'app-post',
     templateUrl: './post.component.html',
     styleUrls: ['./post.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class PostComponent implements OnInit {

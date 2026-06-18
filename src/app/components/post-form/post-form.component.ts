@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ChangeDetectionStrategy } from '@angular/core';
 import { Post } from 'src/app/models/Post';
 import { PostsService } from 'src/app/services/posts.service';
 
@@ -6,6 +6,7 @@ import { PostsService } from 'src/app/services/posts.service';
     selector: 'app-post-form',
     templateUrl: './post-form.component.html',
     styleUrls: ['./post-form.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class PostFormComponent implements OnInit {

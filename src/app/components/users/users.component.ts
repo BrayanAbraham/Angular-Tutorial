@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { User } from 'src/app/models/User';
 import { UserService } from 'src/app/services/user.service';
 
@@ -6,6 +6,7 @@ import { UserService } from 'src/app/services/user.service';
     selector: 'app-users',
     templateUrl: './users.component.html',
     styleUrls: ['./users.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class UsersComponent implements OnInit {

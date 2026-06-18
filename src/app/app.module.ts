@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import {
   provideHttpClient,
   withInterceptorsFromDi,
+  withXhr
 } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -36,7 +37,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
   providers: [
     UserService,
     PostsService,
-    provideHttpClient(withInterceptorsFromDi()),
+    provideHttpClient(withXhr(), withInterceptorsFromDi()),
   ],
 })
 export class AppModule {}

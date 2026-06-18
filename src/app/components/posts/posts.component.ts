@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Post } from 'src/app/models/Post';
 import { PostsService } from 'src/app/services/posts.service';
 
@@ -6,6 +6,7 @@ import { PostsService } from 'src/app/services/posts.service';
     selector: 'app-posts',
     templateUrl: './posts.component.html',
     styleUrls: ['./posts.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class PostsComponent implements OnInit {
